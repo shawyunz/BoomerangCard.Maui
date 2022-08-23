@@ -22,11 +22,12 @@
             x:Name="gridbox"
             Margin="10,40"
             VerticalOptions="EndAndExpand">
-            <!--<controls:CardView
+            <controls:CardView
                 x:Name="card4"
                 Margin="0,0,0,60"
                 CardColor="#FAE68C"
-                Scale="0.85">
+                Scale="0.85"
+                ZIndex="1">
                 <controls:CardView.GestureRecognizers>
                     <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdated" />
                 </controls:CardView.GestureRecognizers>
@@ -35,17 +36,18 @@
                 x:Name="card3"
                 Margin="0,0,0,40"
                 CardColor="#E69391"
-                Scale="0.90">
+                Scale="0.90"
+                ZIndex="2">
                 <controls:CardView.GestureRecognizers>
                     <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdated" />
                 </controls:CardView.GestureRecognizers>
-            </controls:CardView>-->
+            </controls:CardView>
             <controls:CardView
                 x:Name="card2"
                 Margin="0,0,0,20"
                 CardColor="#C0B6CF"
                 Scale="0.95"
-                ZIndex="1">
+                ZIndex="3">
                 <controls:CardView.GestureRecognizers>
                     <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdated" />
                 </controls:CardView.GestureRecognizers>
@@ -54,7 +56,7 @@
                 x:Name="card1"
                 Margin="0,0,0,0"
                 CardColor="#A5D1E8"
-                ZIndex="2">
+                ZIndex="4">
                 <controls:CardView.GestureRecognizers>
                     <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdated" />
                 </controls:CardView.GestureRecognizers>
