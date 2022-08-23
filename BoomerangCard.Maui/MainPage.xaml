@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="BoomerangCard.Maui.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:BoomerangCard.Maui"
+    xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+    BackgroundColor="Black"
+    ios:Page.UseSafeArea="True">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Slider">
+                <Setter Property="BackgroundColor" Value="AliceBlue" />
+                <Setter Property="MaximumTrackColor" Value="Gray" />
+                <Setter Property="MinimumTrackColor" Value="DeepPink" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <Grid
+            x:Name="gridbox"
+            Margin="10,40"
+            VerticalOptions="EndAndExpand">
+            <!--<controls:CardView
+                x:Name="card4"
+                Margin="0,0,0,60"
+                CardColor="#FAE68C"
+                Scale="0.85">
+                <controls:CardView.GestureRecognizers>
+                    <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdated" />
+                </controls:CardView.GestureRecognizers>
+            </controls:CardView>
+            <controls:CardView
+                x:Name="card3"
+                Margin="0,0,0,40"
+                CardColor="#E69391"
+                Scale="0.90">
+                <controls:CardView.GestureRecognizers>
+                    <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdated" />
+                </controls:CardView.GestureRecognizers>
+            </controls:CardView>-->
+            <controls:CardView
+                x:Name="card2"
+                Margin="0,0,0,20"
+                CardColor="#C0B6CF"
+                Scale="0.95"
+                ZIndex="1">
+                <controls:CardView.GestureRecognizers>
+                    <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdated" />
+                </controls:CardView.GestureRecognizers>
+            </controls:CardView>
+            <controls:CardView
+                x:Name="card1"
+                Margin="0,0,0,0"
+                CardColor="#A5D1E8"
+                ZIndex="2">
+                <controls:CardView.GestureRecognizers>
+                    <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdated" />
+                </controls:CardView.GestureRecognizers>
+            </controls:CardView>
+        </Grid>
+
+        <Grid
+            RowSpacing="4"
+            Padding="40,10"
+            HorizontalOptions="FillAndExpand"
+            BackgroundColor="White"
+            ColumnDefinitions="Auto, Auto, *"
+            RowDefinitions="Auto, Auto, Auto, Auto">
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                Text="Spins:" />
+            <Label
+                Grid.Row="1"
+                Grid.Column="1"
+                WidthRequest="40"
+                Text="{Binding Source={x:Reference Spinslider}, Path=Value}" />
+            <Slider
+                x:Name="Spinslider"
+                Grid.Row="1"
+                Grid.Column="2"
+                Maximum="10"
+                Minimum="1"
+                Value="{Binding AniSpins, Mode=TwoWay}"
+                ValueChanged="Spinslider_ValueChanged" />
+
+            <Label
+                Grid.Row="2"
+                Grid.Column="0"
+                Text="Height:" />
+            <Slider
+                x:Name="Heightslider"
+                Grid.Row="2"
+                Grid.Column="2"
+                Maximum="400"
+                Minimum="100"
+                Value="{Binding AniHeight, Mode=TwoWay}"
+                ValueChanged="Spinslider_ValueChanged" />
+            <Label
+                Grid.Row="2"
+                Grid.Column="1"
+                Text="{Binding Source={x:Reference Heightslider}, Path=Value}" />
+
+            <Button
+                Grid.Row="3"
+                Grid.ColumnSpan="3"
+                BackgroundColor="DodgerBlue"
+                Text="Fly"
+                Clicked="Button_Clicked" />
+
+            <StackLayout Grid.Row="0" Grid.ColumnSpan="3">
+                <Label x:Name="LabelStatus" Text="Status:" />
+                <Label x:Name="LabelPower" Text="Power: 00 %" />
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+</ContentPage>
