@@ -10,9 +10,9 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style TargetType="Slider">
-                <Setter Property="BackgroundColor" Value="AliceBlue" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
                 <Setter Property="MaximumTrackColor" Value="Gray" />
-                <Setter Property="MinimumTrackColor" Value="DeepPink" />
+                <Setter Property="MinimumTrackColor" Value="#28C2D1" />
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -108,11 +108,15 @@
             <Button
                 Grid.Row="3"
                 Grid.ColumnSpan="3"
-                BackgroundColor="DodgerBlue"
+                Margin="0,16,0,16"
+                BackgroundColor="#512BD4"
                 Text="Fly"
                 Clicked="Button_Clicked" />
 
-            <StackLayout Grid.Row="0" Grid.ColumnSpan="3">
+            <StackLayout
+                Grid.Row="0"
+                Grid.ColumnSpan="3"
+                Spacing="4">
                 <Label x:Name="LabelStatus" Text="Status:" />
                 <Label x:Name="LabelPower" Text="Power: 00 %" />
             </StackLayout>
