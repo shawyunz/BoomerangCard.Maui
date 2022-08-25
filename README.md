@@ -13,6 +13,7 @@ And my Xamarin.Forms demo repo: [BoomerangCard.Forms](https://github.com/shawyun
 ## Features
 
 - Animation
+- Border
 - Custom view
 - PanGesture
 - Zindex (missing docs?)
@@ -21,7 +22,13 @@ And my Xamarin.Forms demo repo: [BoomerangCard.Forms](https://github.com/shawyun
 
 ## Demo
 
-|                        Android                        |
-| :---------------------------------------------------: |
-| <img alt="Android" src=".\demo\demo.gif" width="340"> |
 
+|                       Android                       |                        iOS                         |
+| :-------------------------------------------------: | :------------------------------------------------: |
+| <img alt="Android" src=".\demo\demo.gif" width="340"> | <img alt="iOS" src=".\demo\demo_ios.gif" width="340"> |
+
+
+
+## Todo
+
+- [ ] Left or right side not detected.
